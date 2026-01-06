@@ -9,3 +9,24 @@ The Dashboard page uses Server-Side Rendering with dynamic = 'force-dynamic' to 
 The Breaking News page follows a hybrid approach using Incremental Static Regeneration with revalidate = 60. This allows the page to be regenerated in the background every minute while still serving a cached version to users for fast performance. As a result, users receive timely news updates without experiencing slower page loads, and the system avoids the heavy computational cost of full server-side rendering. This approach also scales efficiently during traffic spikes, such as major breaking news events.
 
 Overall, this hybrid rendering strategy enables DailyEdge to deliver fast, fresh, and reliable content while keeping server load and hosting costs under control, ensuring an optimal user experience across the platform.
+
+
+## Environment Segregation & Secure Secret Management
+
+### Overview
+This project follows strict environment segregation to ensure safe, reliable, and predictable deployments. Separate configurations are maintained for development, staging, and production to prevent accidental data corruption, secret leakage, and downtime.
+
+---
+
+### Supported Environments
+
+| Environment | Purpose |
+|------------|---------|
+| Development | Local development and testing |
+| Staging | Pre-production validation |
+| Production | Live system for end users |
+
+Each environment operates in isolation and uses its own configuration and infrastructure.
+
+---
+
